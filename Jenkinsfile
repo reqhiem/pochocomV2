@@ -6,18 +6,18 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'npm install'
-                sh 'yarn build'
+                bat 'npm install'
+                bat 'npm build'
             }
         }
         stage('Test') {
             steps {
-                sh 'yarn test'
+                bat 'npm test'
             }
         }
         stage('Deploy'){
             steps {
-                sh 'serve -s build'
+                bat 'serve -s build'
             }
         }
     }
