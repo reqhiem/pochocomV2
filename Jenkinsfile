@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Deploy'){
             steps {
-                bat 'serve -s build'
+                bat 'echo DEPLOYED'
             }
         }
     }
